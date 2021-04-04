@@ -3,18 +3,6 @@
 ## Intro
 The ChatBot creates a dialogue where users can ask questions about some aspects of memory management in C++. After the knowledge base of the chatbot has been loaded from a text file, a knowledge graph representation is created in computer memory, where chatbot answers represent the graph nodes and user queries represent the graph edges. After a user query has been sent to the chatbot, the Levenshtein distance is used to identify the most probable answer. The code is fully functional as-is and uses raw pointers to represent the knowledge graph and interconnections between objects throughout the project.
 
-### Dependencies for Running Locally
-* [cmake >= 3.11](https://cmake.org/install/)
-* make >= 4.1 (Linux, Mac), 3.81 (Windows)
-  * Mac: [Xcode command line tool](https://developer.apple.com/xcode/features/)
-  * [Windows](http://gnuwin32.sourceforge.net/packages/make.htm)
-* gcc/g++ >= 5.4
-  * Mac: [Xcode command line tools](https://developer.apple.com/xcode/features/)
-  * Windows: [MinGW](http://www.mingw.org/)
-* wxWidgets >= 3.0
-  * Linux: `sudo apt-get install libwxgtk3.0-dev libwxgtk3.0-0v5`, [Q&A](https://wiki.codelite.org/pmwiki.php/Main/WxWidgets30Binaries#toc2)
-  * Mac:[homebrew installation](https://formulae.brew.sh/formula/wxmac), [instruction](https://wiki.wxwidgets.org/Install
-
 ### Basic Build Instructions
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`

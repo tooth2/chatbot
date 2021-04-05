@@ -49,4 +49,4 @@ ChatBot Destructor
 * cmake >= 3.11
 * make >= 4.1
 * gcc/g++ >= 5.4
-* [wxWidgets](https://wiki.wxwidgets.org/Install) >= 3.0
+* [wxWidgets](https://wiki.wxwidgets.org/Install) >= 3.0, [wxWidgets Binary](https://wiki.codelite.org/pmwiki.php/Main/WxWidgets30Binaries#toc2)

@@ -17,7 +17,7 @@ The ChatBot creates a dialogue where users can ask questions about some aspects 
 - In file `chatbot.h` / `chatbot.cpp`, make changes to the class `ChatBot` such that it complies with the Rule of Five. Make sure to properly allocate / deallocate memory resources on the heap and also copy member data where it makes sense to you.  In each of the methods (e.g. the copy constructor), print a string of the type "ChatBot Copy Constructor" to the console so that you can see which method is called in later examples. 
 
 3. Exclusive Ownership
-- In file `chatlogic.h` / `chatlogic.cpp`, adapt the vector `_nodes` in a way that the instances of `GraphNodes` to which the vector elements refer are exclusively owned by the class `ChatLogic`. Use an appropriate type of smart pointer to achieve this. Where required, make changes to the code such that data structures and function parameters reflect the changes. When passing the `GraphNode` instances to functions, make sure to not transfer ownership and try to contain the changes to class `ChatLogic` where possible. 
+- In file `chatlogic.h` / `chatlogic.cpp`, adapt the vector `_nodes` in a way that the instances of `GraphNodes` to which the vector elements refer are exclusively owned by the class `ChatLogic`.  When passing the `GraphNode` instances to functions, make sure to not transfer ownership and try to contain the changes to class `ChatLogic` where possible. 
 
 4. Moving Smart Pointers
 - In files `chatlogic.h` / `chatlogic.cpp` and `graphnodes.h` / `graphnodes.cpp` change the ownership of all instances of `GraphEdge` in a way such that each instance of `GraphNode` exclusively owns the outgoing `GraphEdges` and holds non-owning references to incoming `GraphEdges`. Use appropriate smart pointers and where required, make changes to the code such that data structures and function parameters reflect the changes. When transferring ownership from class `ChatLogic`, where all instances of `GraphEdge` are created, into instances of `GraphNode`, make sure to use move semantics. 
@@ -34,8 +34,8 @@ ChatBot Move Assignment Operator
 ChatBot Destructor
 ChatBot Destructor 
 ```
-* `chatgui.h` / `chatgui.cpp`: make `_chatLogic` an exclusive resource to class `ChatbotPanelDialog` using an appropriate smart pointer
-* `chatbot.h` / `chatbot.cpp`:  In each of the methods (e.g. the copy constructor), print a string of the type "ChatBot Copy Constructor" to the console
+* `chatgui.h` / `chatgui.cpp`:  `_chatLogic` an exclusive resource 
+* `chatbot.h` / `chatbot.cpp`:  In each of the methods (e.g. the copy constructor), "ChatBot Copy Constructor" to the console
 * `chatlogic.h` / `chatlogic.cpp`: adapt the vector `_nodes` in a way that the instances of `GraphNodes` to which the vector elements refer are exclusively owned by the class `ChatLogic`. create a local `ChatBot` instance on the stack at the bottom of function `LoadAnswerGraphFromFile`. pass the `ChatBot` instance into the root node. the `ChatBot` instance (`_chatBot`) is used as a communication handle between GUI and ChatBot instance
 * `graphnodes.h` / `graphnodes.cpp`: change the ownership of all instances of `GraphEdge` in a way such that each instance of `GraphNode` exclusively owns the outgoing `GraphEdges` and holds non-owning references to incoming `GraphEdges`
 * Console output: When sending a query to the ChatBot, the output should look like the following:

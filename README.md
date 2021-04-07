@@ -43,7 +43,7 @@ src -
 
 | start | end | 
 |--|--|
-| <img src="images/chatbot_demo1.png" width="500" /> | <img src="images/chatbot_demo2.png" width="500" />  |
+| <img src="images/chatbot_demo1.png" width="600" /> | <img src="images/chatbot_demo2.png" width="400" />  |
 
 ### Run-time Environment Dependency
 * cmake >= 3.11
